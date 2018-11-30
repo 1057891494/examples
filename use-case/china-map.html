@@ -9,20 +9,6 @@
     <script src="../libs/clay.js"></script>
     <script src="../data/map.china.js"></script>
     <title>中国地图</title>
-    <script>
-        function getColors(num) {
-            if (typeof num == 'number' && num > 3) {
-
-                var temp = [], flag = 0;
-                for (flag = 1; flag <= num; flag++)
-                    temp.push('rgb(' + (Math.random(1) * 230 + 20).toFixed(0) + ',' + (Math.random(1) * 230 + 20).toFixed(0) + ',' + (Math.random(1) * 230 + 20).toFixed(0) + ')');
-                return temp;
-
-            } else {
-                return ['rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(0,0,255)'];
-            }
-        }
-    </script>
 </head>
 
 <body></body>
@@ -35,7 +21,7 @@
         .attr("width", 800)
         .attr("height", 500);
 
-    var colors = getColors(chinaMapData.features.length);
+    var colors = $$.getColors(chinaMapData.features.length);
 
     function createImg(index, points) {
         var temp = map(points[0][0], points[0][1]);

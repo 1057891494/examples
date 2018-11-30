@@ -1,4 +1,4 @@
-examples - 主要是使用clay绘制的一些图形用例 
+examples - 主要是使用[clay.js](https://github.com/yelloxing/clay)绘制的一些图形用例 
 ==================================================
 
 ### 免责声明
