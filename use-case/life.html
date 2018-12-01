@@ -38,16 +38,16 @@
     var tree = clay.treeLayout();
 
     // 基本配置
-    tree.bind('root', function (initTree) {
+    tree.root(function (initTree) {
         return initTree;
     })
-        .bind('child', function (parentTree) {
+        .child(function (parentTree) {
             return parentTree.children;
         })
-        .bind('id', function (treedata) {
+        .id(function (treedata) {
             return treedata.name;
         })
-        .bind('drawer', function (nodes, rootid, size) {
+        .drawer(function (nodes, rootid, size) {
             var node = nodes[rootid];
             var s = 900 / size;
             var x = node.top * s, y = node.left * 140;
